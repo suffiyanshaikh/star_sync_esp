@@ -30,6 +30,7 @@ typedef struct
 {
     const char *command; // The AT command string
     uint32_t timeout_ms; // Timeout in milliseconds for the command
+    const char *response;
 } at_command_t;
 
 /* Private function prototype -----------------------------------------------*/
@@ -43,6 +44,31 @@ void check_at_connection();
  *  @brief reset ec200u
  */
 void reset_ec200u();
+
+/**
+ *  @brief configure ec200u error reporting
+ */
+void enable_ec200u_error_output();
+
+/**
+ *  @brief set ec200u to bydefault settings
+ */
+void config_ec200u();
+
+/**
+ *  @brief activate ec200u network
+ */
+void activate_ec200u_network();
+
+/**
+ *  @brief turn on gnss engine in ec200u
+ */
+void turn_on_gnss();
+
+/**
+ *  @brief read gps data
+ */
+void read_gps_cordinates();
 
 /**
  *
